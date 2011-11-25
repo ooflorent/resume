@@ -1,0 +1,148 @@
+@import "bootstrap.less";
+
+@whiteSmoke:        #f5f5f5;
+@sand:              #fee9cc;
+
+@gridColumns:       7;
+@gridColumnWidth:   100px;
+@gridGutterWidth:   20px;
+
+#reset > .global-reset();
+
+body {
+	.container();
+}
+
+body, p, li {
+	#font > .shorthand(normal,14px,20px);
+	font-family: "Droid Sans";
+	color: @black;
+}
+
+code {
+	.border-radius(3px);
+	#font > .shorthand(normal,13px,20px);
+	font-family: Monaco;
+	padding: 1px 3px;
+	background: @sand;
+	color: @grayDark;
+}
+
+em {
+	font-style: italic;
+}
+
+header {
+	.clearfix();
+	
+	h1 {
+		margin: 10px;
+		
+		.columns(4);
+		.offset(3);
+		
+		font-family: "Helvetica Neue";
+		color: @grayDark;
+		text-transform: uppercase;
+		text-align: right;
+		
+		#font > .shorthand(bold, 80px, 70px);
+		
+		&:first-line {
+			#font > .shorthand(bold, 60px, 50px);
+		}
+	}
+	
+	p {
+		margin: 0;
+		height: 20px;
+		padding-right: 24px;
+		line-height: 16px;
+		vertical-align: middle;
+		
+		.columns(4);
+		.offset(2.8);
+		
+		text-align: right;
+		color: @grayDark;
+	}
+	
+	p.email {
+		background: url(../img/email.png) top right no-repeat;
+	}
+	
+	p.phone {
+		background: url(../img/phone.png) top right no-repeat;
+	}
+}
+
+h2 {
+	#font > .shorthand(normal, 24px, 24px);
+
+	color: @black;
+	border-bottom: 2px solid @grayDark;
+	font-family: "Raleway";
+	text-transform: uppercase;
+	padding: 30px @gridGutterWidth 5px;
+}
+
+ul.skills {
+	li {
+		.clearfix();
+		margin: 10px 0;
+		
+		h3 {
+			.columns(2);
+			
+			text-align: right;
+			color: @gray;
+			
+			#font > .shorthand(normal, 14px, 20px);
+		}
+		
+		ul {
+			.columns(5);
+			
+			li {
+				margin: 0 0 2px 30px;
+				list-style: url(../img/check.png);
+			}
+		}
+	}
+}
+
+ul.timeline {
+	li {
+		.clearfix();
+		
+		display: block;
+		margin: 10px 0;
+		
+		div {
+			.columns(2);
+			
+			span {
+				font-size: 12px;
+			}
+			
+			* {
+				display: block;
+				text-align: right;
+				color: @gray;
+			}
+		}
+		
+		dl {
+			.columns(5);
+			
+			dt {
+				#font > .shorthand(bold,14px,20px);
+				color: @grayDark;
+			}
+			
+			dd {
+				padding-left: 10px;
+			}
+		}
+	}
+}
