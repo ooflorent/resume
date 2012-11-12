@@ -22,7 +22,7 @@ body, p, li {
 code {
 	.border-radius(3px);
 	#font > .shorthand(normal,13px,20px);
-	font-family: Monaco;
+	font-family: Monaco, monospace;
 	padding: 1px 3px;
 	background: @sand;
 	color: @grayDark;
@@ -41,7 +41,7 @@ header {
 		.columns(4);
 		.offset(3);
 		
-		font-family: "Helvetica Neue";
+		font-family: "Helvetica Neue", sans-serif;
 		color: @grayDark;
 		text-transform: uppercase;
 		text-align: right;
@@ -81,16 +81,21 @@ h2 {
 
 	color: @black;
 	border-bottom: 2px solid @grayDark;
-	font-family: "Raleway";
+	font-family: "Raleway", sans-serif;
 	text-transform: uppercase;
 	padding: 30px @gridGutterWidth 5px;
+    margin: 10px 0 0;
 }
 
 ul.skills {
 	li {
 		.clearfix();
-		margin: 10px 0;
-		
+		margin: 20px 0 0;
+
+        &:first-child {
+            margin-top: 10px;
+        }
+
 		h3 {
 			.columns(2);
 			
@@ -104,7 +109,7 @@ ul.skills {
 			.columns(5);
 			
 			li {
-				margin: 0 0 2px 30px;
+				margin: 0 0 2px 30px !important;
 				list-style: url(../img/check.png);
 			}
 		}
@@ -114,9 +119,15 @@ ul.skills {
 ul.timeline {
 	li {
 		.clearfix();
-		
-		display: block;
-		margin: 10px 0;
+		margin: 20px 0 0;
+
+        &:first-child {
+            margin-top: 10px;
+        }
+
+        &.sub {
+            margin-top: 5px;
+        }
 		
 		div {
 			.columns(2);
